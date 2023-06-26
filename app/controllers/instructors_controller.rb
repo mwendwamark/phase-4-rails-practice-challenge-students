@@ -9,12 +9,18 @@ class InstructorsController < ApplicationController
 
   def show 
     instructor = finder 
-    render json:instructor, status: :ok 
+    render json: instructor, except: [:created_at, :updated_at], include: { students: { except: [:created_at, :updated_at] } }, status: :ok
   end
 
   def create 
     new_instructor = Instructor.create!(instructor_params)
     render json: new_instructor, status: :created    
+  end 
+
+  def update 
+    instructor = finder 
+    instructor.update!(instructor_params)
+    render json: instructor
   end
 
   def destroy 
