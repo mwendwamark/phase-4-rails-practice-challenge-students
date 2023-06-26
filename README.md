@@ -1,12 +1,12 @@
-# Rails Practice Challenge - Students
+````# Rails Practice Challenge - Students
 
 ## Setup
 
 To download the dependencies for backend, run:
 
-```console
+`````console
 $ bundle install
-```
+`````
 
 There is some starter code in the `db/seeds.rb` file so that once you've
 generated the models, you'll be able to create data to test your application.
@@ -61,3 +61,4 @@ with a message.
 - Time yourself while working on the deliverables
 - Commit when you hit 75 minutes
 - When you have finished all deliverables, commit again.
+````
